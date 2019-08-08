@@ -1,0 +1,5 @@
+{% load static%}
+
+{
+     background: url('{% static "images/star-sky.jpg" %}')
+}

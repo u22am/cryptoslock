@@ -1,0 +1,6 @@
+def static(instance, filename):
+    return 'user_{0}/{1}'.format(instance.user.id, filename)
+
+class UploadModel(models.Model):
+    user = models.OneToOneField(User)
+    file = models.FileField(upload_to=static)

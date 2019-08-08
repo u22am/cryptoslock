@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet"  href=  "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"  >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
+  </head>
+  <body>
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-md">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="{% static "images/logo.jpg" %}" height ="30px"> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-dark font-weight-normal" href="{% url 'myapp1:signin' %}" >Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark font-weight-normal" href="{% url 'myapp1:product' %}" >Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark font-weight-normal" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark font-weight-normal" href="#"></a>
+        </li>
+        {% if registered %}
+        <li class="nav-item active">
+          <a class="nav-link text-dark font-weight-normal" href="#" >Welcome back</a>
+        </li>
+        {% else %}
+        <li class="nav-item active">
+          <a class="nav-link text-dark font-weight-normal" href="{% url 'myapp1:signup' %}" >Sign up</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<img src="{% static "images/slide_img/s1.jpg" %}" height="480px" >
+
+<!-- Page Content -->
+  <div class="container-fluid bg-light">
+    <br>
+    <h2 class="font-weight-normal">Securing the world's data.</h1>
+    <p class="lead">CryptosLock software utilizes cryptographically-enforced compartmentalization so you can share and communicate safely.<br> By removing server infrastructure and its support staff from your threat model,<br> CryptosLock allows you to drive greater organizational success.</a>!</p>
+  </div>
+  <br>
+  <br>
+  <br>
+
+    <div class="row container bg-muted">
+          <div class="col-md-3">
+            <a href="#">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="{% static "images/pro_img/b1.jpg" %}" alt="">
+            </a>
+          </div>
+          <div class="col-md-8">
+            <h3>Basic plan</h3>
+            <h4>Secure, reliable backup to protect your most important files from data loss and ransomware.</h4>
+            <p>Sync your data across all of your devices.<br> Access all of your historical versions and deleted files with no time limits or restrictions. <br>We offer unparalleled privacy for you and your data.<br>Get 1 gb free storage. <br>also get 24/7 Support. </p>
+            <a class="btn btn-primary" href="{% url 'myapp1:signup' %}">Sign up</a>
+          </div>
+        </div>
+  <br>
+        <div class="row container">
+          <div class="col-md-3 container">
+            <a href="#">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="{% static "images/pro_img/p2.jpg" %}" alt="">
+            </a>
+          </div>
+              <div class="col-md-9">
+                  <h3>Pro plan</h3>
+                  <h4>Protect what matters most</h4>
+                  <p>You create new data every day, from important documents to photos capturing life's best moments. <br>CryptosLock ensures that your data is safe regardless of what else life brings your way.<br>Get 10 gb free storage. <br>also get 24/7 Support.</p>
+                  <a class="btn btn-primary" href="{% url 'myapp1:signup' %}">Sign up</a>
+              </div>
+
+            </div>
+  <br>
+
+            <div class="row container">
+                  <div class="col-md-3">
+                    <a href="#">
+                      <img class="img-fluid rounded mb-3 mb-md-0" src="{% static "images/pro_img/e3.jpg" %}" alt="">
+                    </a>
+                  </div>
+                  <div class="col-md-8">
+                    <h3>Elite plan</h3>
+                    <p>Multi-user sharing and sync with No Knowledge encryption.<br> Access and edit shared documents using our inherently secure application, controlled by a flexible policy engine with robust audit trails.<br>Get 100 gb free storage. <br>also get 24/7 Support.</p>
+                    <a class="btn btn-primary" href="{% url 'myapp1:signup' %}">Sign up</a>
+                  </div>
+                </div>
+                <!--  contact or suppoertr-->
+                <div class="newsletter-subscribe">
+          <div class="container">
+              <div class="intro">
+                  <h2 class="text-center">Keep in Touch</h2>
+                  <p class="text-center">Leave your Email address we will contact you for any type of queries. <br>Thanks to visit CryptosLock</p>
+              </div>
+              <form class="form-inline" method="post">
+                  <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
+                  <div class="form-group"><button class="btn btn-primary" type="submit">Contact us</button></div>
+              </form>
+          </div>
+      </div>
+      <!--  footer-->
+      <body>
+      <div class="footer-basic">
+          <footer>
+              <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#">Home</a></li>
+                  <li class="list-inline-item"><a href="#">Product</a></li>
+                  <li class="list-inline-item"><a href="#">About</a></li>
+              </ul>
+              <p class="copyright">CryptosLock © 2019</p>
+          </footer>
+    <!--js scripts for animation-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
